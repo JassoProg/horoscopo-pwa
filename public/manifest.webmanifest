@@ -1,0 +1,33 @@
+{
+  "name": "Horoscopo React",
+  "short_name": "Horoscopo",
+  "description": "App de horóscopo en React con Vite y PWA",
+  "theme_color": "#212529",
+  "background_color": "#212529",
+  "display": "standalone",
+  "display_override": ["fullscreen", "minimal-ui", "window-controls-overlay"],
+  "start_url": ".",
+  "icons": [
+    { "src": "/windows11/SmallTile.scale-100.png", "sizes": "71x71", "type": "image/png" },
+    { "src": "/windows11/SmallTile.scale-125.png", "sizes": "89x89", "type": "image/png" },
+    { "src": "/windows11/SmallTile.scale-150.png", "sizes": "107x107", "type": "image/png" },
+    { "src": "/windows11/SmallTile.scale-200.png", "sizes": "142x142", "type": "image/png" },
+    { "src": "/windows11/SmallTile.scale-400.png", "sizes": "284x284", "type": "image/png" },
+    { "src": "/windows11/Square150x150Logo.scale-100.png", "sizes": "150x150", "type": "image/png" },
+    { "src": "/windows11/Square150x150Logo.scale-125.png", "sizes": "188x188", "type": "image/png" },
+    { "src": "/windows11/Square150x150Logo.scale-150.png", "sizes": "225x225", "type": "image/png" },
+    { "src": "/windows11/Square150x150Logo.scale-200.png", "sizes": "300x300", "type": "image/png" },
+    { "src": "/windows11/Square150x150Logo.scale-400.png", "sizes": "600x600", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-20.png", "sizes": "20x20", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-24.png", "sizes": "24x24", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-256.png", "sizes": "256x256", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-30.png", "sizes": "30x30", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-36.png", "sizes": "36x36", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-40.png", "sizes": "40x40", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-44.png", "sizes": "44x44", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/windows11/Square44x44Logo.altform-lightunplated_targetsize-60.png", "sizes": "60x60", "type": "image/png" }
+  ]
+}
