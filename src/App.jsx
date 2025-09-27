@@ -65,7 +65,7 @@ function App() {
                 <div className="card-body">
                   <form onSubmit={handleSubmit} className="form">
                     <div className="mb-3">
-                      <label htmlFor="name" className="form-label">Nombre:</label>
+                      <label htmlFor="name" className="form-label name-label">Nombre:</label>
                       <input
                         type="text"
                         id="name"
@@ -78,7 +78,7 @@ function App() {
                     </div>
 
                     <div className="mb-3">
-                      <label htmlFor="birthDate" className="form-label">Fecha de Nacimiento:</label>
+                      <label htmlFor="birthDate" className="form-label date-label">Fecha de Nacimiento:</label>
                       <input
                         type="text"
                         id="birthDate"
@@ -101,25 +101,43 @@ function App() {
 
             {/* Right Section - Zodiac Display */}
             <div className="col-md-6">
-              <div className="card">
-                <div className="card-body">
+              <div className="card zodiac-result-card">
+                {zodiacSign && (
+                  <div 
+                    className="zodiac-gradient-bg" 
+                    style={{ background: zodiacSign.bgGradient }}
+                  ></div>
+                )}
+                <div className="card-body zodiac-content">
                   {zodiacSign ? (
                     <div className="zodiac-result">
-                      <div className="text-center mb-3">
+                      <div className="text-center mb-4">
                         <h2 className="card-title">Tu Signo: {zodiacSign.name}</h2>
-                        <div className="zodiac-symbol">{zodiacSign.image}</div>
+                        <div className="zodiac-image">{zodiacSign.image}</div>
+                        <div className="zodiac-symbol">{zodiacSign.symbol}</div>
                       </div>
+                      
                       <div className="text-center mb-3">
                         <span className="badge badge-secondary">Elemento: {zodiacSign.element}</span>
                       </div>
-                      <div className="horoscope-description">
+
+                      <div className="traits-list">
+                        {zodiacSign.traits.map((trait, index) => (
+                          <span key={index} className="trait-badge">{trait}</span>
+                        ))}
+                      </div>
+
+                      <div 
+                        className="horoscope-description"
+                        style={{ '--zodiac-gradient': zodiacSign.bgGradient }}
+                      >
                         <h5>{name}</h5>
                         <p>{zodiacSign.description}</p>
                       </div>
                     </div>
                   ) : (
                     <div className="text-center placeholder">
-                      <div className="zodiac-symbol">?</div>
+                      <div className="placeholder-icon">🔮</div>
                       <p>Introduce tu nombre y fecha de nacimiento para descubrir tu signo zodiacal</p>
                     </div>
                   )}

@@ -7,7 +7,10 @@ export const zodiacSigns = [
     element: "Fuego",
     description: "Los Aries son personas valientes, independientes y llenas de energía. Son líderes naturales que no temen enfrentar nuevos desafíos. Su entusiasmo y determinación los lleva a conseguir sus objetivos, aunque a veces pueden ser impulsivos.",
     traits: ["Valiente", "Independiente", "Entusiasta", "Competitivo"],
-    image: "♈"
+    image: "🐏",
+    symbol: "♈",
+    colors: ["#FF6B6B", "#FF8E53"],
+    bgGradient: "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)"
   },
   {
     name: "Tauro",
@@ -16,7 +19,10 @@ export const zodiacSigns = [
     element: "Tierra",
     description: "Los Tauro son personas estables, determinadas y leales. Valoran la seguridad y el confort, y son conocidos por su paciencia y perseverancia. Disfrutan de los placeres de la vida y son muy confiables.",
     traits: ["Leal", "Paciente", "Determinado", "Práctico"],
-    image: "♉"
+    image: "🐂",
+    symbol: "♉",
+    colors: ["#4ECDC4", "#96E6B3"],
+    bgGradient: "linear-gradient(135deg, #4ECDC4 0%, #96E6B3 100%)"
   },
   {
     name: "Géminis",
@@ -25,7 +31,10 @@ export const zodiacSigns = [
     element: "Aire",
     description: "Los Géminis son personas curiosas, versátiles y comunicativas. Tienen una mente rápida y les encanta aprender cosas nuevas. Son sociables y adaptables, aunque a veces pueden parecer indecisos.",
     traits: ["Curioso", "Comunicativo", "Adaptable", "Inteligente"],
-    image: "♊"
+    image: "👥",
+    symbol: "♊",
+    colors: ["#FFD93D", "#6BCF7F"],
+    bgGradient: "linear-gradient(135deg, #FFD93D 0%, #6BCF7F 100%)"
   },
   {
     name: "Cáncer",
@@ -34,7 +43,10 @@ export const zodiacSigns = [
     element: "Agua",
     description: "Los Cáncer son personas emocionales, intuitivas y protectoras. Valoran profundamente la familia y el hogar. Son empáticos y cariñosos, siempre dispuestos a cuidar a sus seres queridos.",
     traits: ["Emocional", "Intuitivo", "Protector", "Familiar"],
-    image: "♋"
+    image: "🦀",
+    symbol: "♋",
+    colors: ["#A8E6CF", "#88D8C0"],
+    bgGradient: "linear-gradient(135deg, #A8E6CF 0%, #88D8C0 100%)"
   },
   {
     name: "Leo",
@@ -43,7 +55,10 @@ export const zodiacSigns = [
     element: "Fuego",
     description: "Los Leo son personas carismáticas, generosas y creativas. Les gusta ser el centro de atención y tienen un gran corazón. Son líderes naturales con mucha confianza en sí mismos y un espíritu dramático.",
     traits: ["Carismático", "Generoso", "Creativo", "Orgulloso"],
-    image: "♌"
+    image: "🦁",
+    symbol: "♌",
+    colors: ["#FFB347", "#FFCC5C"],
+    bgGradient: "linear-gradient(135deg, #FFB347 0%, #FFCC5C 100%)"
   },
   {
     name: "Virgo",
@@ -52,7 +67,10 @@ export const zodiacSigns = [
     element: "Tierra",
     description: "Los Virgo son personas analíticas, perfeccionistas y serviciales. Son muy detallistas y organizados, siempre buscando la manera de mejorar las cosas. Su naturaleza práctica los hace muy confiables.",
     traits: ["Analítico", "Perfeccionista", "Servicial", "Organizado"],
-    image: "♍"
+    image: "👩",
+    symbol: "♍",
+    colors: ["#98D8E8", "#F6D55C"],
+    bgGradient: "linear-gradient(135deg, #98D8E8 0%, #F6D55C 100%)"
   },
   {
     name: "Libra",
@@ -61,7 +79,10 @@ export const zodiacSigns = [
     element: "Aire",
     description: "Los Libra son personas equilibradas, diplomáticas y justas. Buscan la armonía en todas las situaciones y tienen un gran sentido estético. Son sociables y les gusta mantener la paz en sus relaciones.",
     traits: ["Equilibrado", "Diplomático", "Justo", "Social"],
-    image: "♎"
+    image: "⚖️",
+    symbol: "♎",
+    colors: ["#FF9A9E", "#FECFEF"],
+    bgGradient: "linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%)"
   },
   {
     name: "Escorpio",
@@ -70,7 +91,10 @@ export const zodiacSigns = [
     element: "Agua",
     description: "Los Escorpio son personas intensas, misteriosas y apasionadas. Tienen una gran fuerza de voluntad y no temen explorar los aspectos más profundos de la vida. Son muy leales pero también pueden ser celosos.",
     traits: ["Intenso", "Misterioso", "Apasionado", "Leal"],
-    image: "♏"
+    image: "🦂",
+    symbol: "♏",
+    colors: ["#667eea", "#764ba2"],
+    bgGradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
     name: "Sagitario",
@@ -79,7 +103,10 @@ export const zodiacSigns = [
     element: "Fuego",
     description: "Los Sagitario son personas aventureras, optimistas y filosóficas. Les encanta viajar y explorar nuevas culturas. Son honestos y directos, siempre en busca de la verdad y nuevas experiencias.",
     traits: ["Aventurero", "Optimista", "Honesto", "Filosófico"],
-    image: "♐"
+    image: "🏹",
+    symbol: "♐",
+    colors: ["#f093fb", "#f5576c"],
+    bgGradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
     name: "Capricornio",
@@ -88,7 +115,10 @@ export const zodiacSigns = [
     element: "Tierra",
     description: "Los Capricornio son personas ambiciosas, disciplinadas y responsables. Trabajan duro para alcanzar sus metas y son muy perseverantes. Valoran la tradición y el status, y son excelentes líderes.",
     traits: ["Ambicioso", "Disciplinado", "Responsable", "Perseverante"],
-    image: "♑"
+    image: "🐐",
+    symbol: "♑",
+    colors: ["#4facfe", "#00f2fe"],
+    bgGradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
     name: "Acuario",
@@ -97,7 +127,10 @@ export const zodiacSigns = [
     element: "Aire",
     description: "Los Acuario son personas innovadoras, independientes y humanitarias. Tienen ideas originales y les gusta luchar por causas justas. Son muy sociables pero también valoran su libertad personal.",
     traits: ["Innovador", "Independiente", "Humanitario", "Original"],
-    image: "♒"
+    image: "🏺",
+    symbol: "♒",
+    colors: ["#43e97b", "#38f9d7"],
+    bgGradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
     name: "Piscis",
@@ -106,7 +139,10 @@ export const zodiacSigns = [
     element: "Agua",
     description: "Los Piscis son personas intuitivas, empáticas y creativas. Tienen una gran sensibilidad y conexión emocional con otros. Son soñadores y artísticos, pero a veces pueden ser demasiado sensibles.",
     traits: ["Intuitivo", "Empático", "Creativo", "Sensible"],
-    image: "♓"
+    image: "🐟",
+    symbol: "♓",
+    colors: ["#ffecd2", "#fcb69f"],
+    bgGradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   }
 ];
 
