@@ -1,0 +1,1156 @@
+/* Reset and Base Styles *//* Bootstrap-like Reset and base styles */
+
+* {* {
+
+  margin: 0;  margin: 0;
+
+  padding: 0;  padding: 0;
+
+  box-sizing: border-box;  box-sizing: border-box;
+
+}}
+
+
+
+body {html, body {
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;  height: 100%;
+
+  line-height: 1.6;}
+
+  color: #333;
+
+  background: #f8f9fa;body {
+
+}  font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+
+  background: #212529;
+
+.app {  min-height: 100vh;
+
+  min-height: 100vh;  color: #e9ecef;
+
+}  line-height: 1.5;
+
+}
+
+/* Navigation */
+
+.navbar {#root {
+
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  width: 100%;
+
+  color: white;  min-height: 100vh;
+
+  padding: 1rem 0;}
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+}/* Bootstrap-like container */
+
+.app {
+
+.navbar .container-fluid {  min-height: 100vh;
+
+  display: flex;  background: #212529;
+
+  justify-content: space-between;}
+
+  align-items: center;
+
+  max-width: 1200px;.container-fluid {
+
+  margin: 0 auto;  padding: 0 15px;
+
+  padding: 0 1rem;  margin: 0 auto;
+
+}  max-width: 1200px;
+
+}
+
+.navbar-brand {
+
+  font-size: 1.8rem;/* Bootstrap-like Header */
+
+  font-weight: 700;.navbar {
+
+  margin: 0;  background: #343a40;
+
+  color: white;  padding: 1rem 0;
+
+}  border-bottom: 1px solid #495057;
+
+  margin-bottom: 2rem;
+
+.back-btn, .view-all-btn {}
+
+  background: rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);.navbar-brand {
+
+  color: white;  color: #fff;
+
+  padding: 0.5rem 1rem;  font-size: 2rem;
+
+  border-radius: 25px;  font-weight: 700;
+
+  cursor: pointer;  margin-bottom: 0.5rem;
+
+  transition: all 0.3s ease;  text-align: center;
+
+  font-weight: 500;  display: block;
+
+}  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+
+  -webkit-background-clip: text;
+
+.back-btn:hover, .view-all-btn:hover {  -webkit-text-fill-color: transparent;
+
+  background: rgba(255, 255, 255, 0.3);  background-clip: text;
+
+  transform: translateY(-2px);  text-shadow: none;
+
+}}
+
+
+
+.placeholder-btn {.navbar-text {
+
+  width: 80px;  color: #adb5bd;
+
+}  font-size: 1rem;
+
+  text-align: center;
+
+/* Hero Section */  margin: 0;
+
+.hero-section {}
+
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  color: white;/* Bootstrap-like Main container */
+
+  padding: 4rem 0;.main-content {
+
+  position: relative;  padding: 2rem 0;
+
+  overflow: hidden;}
+
+}
+
+.row {
+
+.hero-content {  display: flex;
+
+  max-width: 1200px;  flex-wrap: wrap;
+
+  margin: 0 auto;  margin: 0 -15px;
+
+  padding: 0 1rem;}
+
+  display: flex;
+
+  align-items: center;.col-md-6 {
+
+  gap: 4rem;  flex: 0 0 50%;
+
+}  max-width: 50%;
+
+  padding: 0 15px;
+
+.hero-text {  margin-bottom: 2rem;
+
+  flex: 1;}
+
+}
+
+/* Bootstrap-like Card - Mejorada */
+
+.hero-title {.card {
+
+  font-size: 3.5rem;  background: linear-gradient(145deg, #343a40 0%, #2c3136 100%);
+
+  font-weight: 700;  border: 1px solid #495057;
+
+  margin-bottom: 1.5rem;  border-radius: 1rem;
+
+  line-height: 1.2;  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+}  height: fit-content;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+.hero-subtitle {  overflow: hidden;
+
+  font-size: 1.1rem;  position: relative;
+
+  line-height: 1.8;}
+
+  margin-bottom: 2.5rem;
+
+  color: rgba(255, 255, 255, 0.9);.card:hover {
+
+}  transform: translateY(-4px);
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+
+.hero-buttons {}
+
+  display: flex;
+
+  gap: 1rem;.card::before {
+
+}  content: '';
+
+  position: absolute;
+
+.btn {  top: 0;
+
+  padding: 0.75rem 1.5rem;  left: 0;
+
+  border-radius: 25px;  right: 0;
+
+  font-weight: 600;  height: 4px;
+
+  cursor: pointer;  background: linear-gradient(90deg, #667eea, #764ba2);
+
+  transition: all 0.3s ease;}
+
+  text-decoration: none;
+
+  display: inline-block;.card-body {
+
+  border: none;  padding: 2rem;
+
+  font-size: 0.9rem;}
+
+}
+
+/* Bootstrap-like Form */
+
+.btn-primary {.form {
+
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);  display: flex;
+
+  color: white;  flex-direction: column;
+
+}  gap: 1rem;
+
+}
+
+.btn-primary:hover {
+
+  transform: translateY(-2px);.mb-3 {
+
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);  margin-bottom: 1rem;
+
+}}
+
+
+
+.btn-outline {.form-group {
+
+  background: transparent;  display: flex;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);  flex-direction: column;
+
+  color: white;  gap: 0.5rem;
+
+}}
+
+
+
+.btn-outline:hover {
+
+  background: rgba(255, 255, 255, 0.1);.form-label {
+
+  transform: translateY(-2px);  font-weight: 600;
+
+}  color: #f8f9fa;
+
+  font-size: 0.95rem;
+
+.btn-lg {  margin-bottom: 0.75rem;
+
+  padding: 1rem 2rem;  display: flex;
+
+  font-size: 1.1rem;  align-items: center;
+
+}  gap: 0.5rem;
+
+}
+
+/* Zodiac Wheel */
+
+.hero-image {.form-label.name-label::before {
+
+  flex: 1;  content: '👤';
+
+  display: flex;  font-size: 1rem;
+
+  justify-content: center;}
+
+  align-items: center;
+
+}.form-label.date-label::before {
+
+  content: '📅';
+
+.zodiac-wheel {  font-size: 1rem;
+
+  position: relative;}
+
+  width: 300px;
+
+  height: 300px;.form-control {
+
+  border-radius: 50%;  padding: 0.375rem 0.75rem;
+
+  background: rgba(255, 255, 255, 0.1);  border: 1px solid #6c757d;
+
+  backdrop-filter: blur(10px);  border-radius: 0.375rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.2);  font-size: 1rem;
+
+  animation: float 6s ease-in-out infinite;  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}  background: #495057;
+
+  color: #fff;
+
+.zodiac-center {  font-weight: 400;
+
+  position: absolute;}
+
+  top: 50%;
+
+  left: 50%;.form-control:focus {
+
+  transform: translate(-50%, -50%);  outline: none;
+
+  font-size: 2rem;  border-color: #86b7fe;
+
+  background: rgba(255, 255, 255, 0.2);  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+
+  width: 60px;}
+
+  height: 60px;
+
+  border-radius: 50%;.form-control.is-invalid {
+
+  display: flex;  border-color: #dc3545;
+
+  align-items: center;  background-color: #495057;
+
+  justify-content: center;  color: #fff;
+
+  backdrop-filter: blur(10px);}
+
+}
+
+.form-control::placeholder {
+
+.zodiac-signs-circle {  color: #adb5bd;
+
+  position: relative;  opacity: 1;
+
+  width: 100%;}
+
+  height: 100%;
+
+}.invalid-feedback {
+
+  color: #dc3545;
+
+.zodiac-sign-item {  font-size: 0.9rem;
+
+  position: absolute;  margin-top: 0.25rem;
+
+  top: 50%;}
+
+  left: 50%;
+
+  width: 45px;
+
+  height: 45px;.submit-btn {
+
+  border-radius: 50%;  background: #333;
+
+  display: flex;  color: #e0e0e0;
+
+  flex-direction: column;  border: none;
+
+  align-items: center;  padding: 1rem 1.5rem;
+
+  justify-content: center;  border-radius: 8px;
+
+  font-size: 0.7rem;  font-size: 1rem;
+
+  color: white;  font-weight: 500;
+
+  backdrop-filter: blur(10px);/* Bootstrap-like Button */
+
+  border: 1px solid rgba(255, 255, 255, 0.3);.btn {
+
+  cursor: pointer;  display: inline-block;
+
+  transition: all 0.3s ease;  padding: 0.375rem 0.75rem;
+
+}  margin-bottom: 0;
+
+  font-size: 1rem;
+
+.zodiac-sign-item:hover {  font-weight: 400;
+
+  transform: scale(1.1);  line-height: 1.5;
+
+}  text-align: center;
+
+  text-decoration: none;
+
+.sign-symbol {  vertical-align: middle;
+
+  font-size: 1.2rem;  cursor: pointer;
+
+}  border: 1px solid transparent;
+
+  border-radius: 0.375rem;
+
+.sign-name-small {  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  font-size: 0.6rem;}
+
+  font-weight: 600;
+
+  margin-top: 2px;.btn-primary {
+
+}  color: #fff;
+
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+/* Form Section */  border: none;
+
+.form-section {  padding: 0.75rem 2rem;
+
+  padding: 4rem 0;  font-weight: 600;
+
+  background: #f8f9fa;  border-radius: 2rem;
+
+}  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+
+  transition: all 0.3s ease;
+
+.form-card {  position: relative;
+
+  background: white;  overflow: hidden;
+
+  padding: 3rem;}
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);.btn-primary::before {
+
+  text-align: center;  content: '';
+
+}  position: absolute;
+
+  top: 0;
+
+.form-title {  left: -100%;
+
+  font-size: 2.2rem;  width: 100%;
+
+  font-weight: 700;  height: 100%;
+
+  margin-bottom: 2rem;  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+
+  color: #333;  transition: left 0.5s;
+
+  line-height: 1.3;}
+
+}
+
+.btn-primary:hover {
+
+.zodiac-form {  color: #fff;
+
+  max-width: 400px;  background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+
+  margin: 0 auto;  transform: translateY(-2px);
+
+}  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+
+}
+
+.form-group {
+
+  margin-bottom: 1.5rem;.btn-primary:hover::before {
+
+  text-align: left;  left: 100%;
+
+}}
+
+
+
+.form-label {.btn-primary:active {
+
+  display: block;  transform: translateY(0);
+
+  margin-bottom: 0.5rem;}
+
+  font-weight: 600;
+
+  color: #555;/* Bootstrap-like Badge */
+
+}.badge {
+
+  display: inline-block;
+
+.form-control {  padding: 0.35em 0.65em;
+
+  width: 100%;  font-size: 0.75em;
+
+  padding: 1rem;  font-weight: 700;
+
+  border: 2px solid #e9ecef;  line-height: 1;
+
+  border-radius: 10px;  color: #fff;
+
+  font-size: 1rem;  text-align: center;
+
+  transition: all 0.3s ease;  white-space: nowrap;
+
+  background: #f8f9fa;  vertical-align: baseline;
+
+}  border-radius: 0.375rem;
+
+}
+
+.form-control:focus {
+
+  outline: none;.badge-secondary {
+
+  border-color: #667eea;  background: linear-gradient(45deg, #6c757d 0%, #495057 100%);
+
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);  color: #fff;
+
+  background: white;  padding: 0.8rem 1.5rem;
+
+}  border-radius: 2rem;
+
+  font-weight: 700;
+
+.form-control.is-invalid {  font-size: 1rem;
+
+  border-color: #dc3545;  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+
+}  border: 2px solid rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(10px);
+
+.invalid-feedback {  text-transform: uppercase;
+
+  color: #dc3545;  letter-spacing: 1px;
+
+  font-size: 0.875rem;}
+
+  margin-top: 0.25rem;
+
+}/* Bootstrap-like Utilities */
+
+.text-center {
+
+/* Features Section */  text-align: center;
+
+.features-section {}
+
+  padding: 4rem 0;
+
+  background: white;.mb-3 {
+
+}  margin-bottom: 1rem;
+
+}
+
+.feature-card {
+
+  text-align: center;.card-title {
+
+  padding: 2rem;  margin-bottom: 1rem;
+
+}  color: #f8f9fa;
+
+  font-weight: 700;
+
+.feature-icon {  font-size: 1.5rem;
+
+  font-size: 3rem;  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  margin-bottom: 1rem;}
+
+}
+
+/* Responsive utilities */
+
+.feature-card h3 {@media (max-width: 768px) {
+
+  font-size: 1.5rem;  .col-md-6 {
+
+  font-weight: 700;    flex: 0 0 100%;
+
+  margin-bottom: 1rem;    max-width: 100%;
+
+  color: #333;  }
+
+}  
+
+  .row {
+
+.feature-card p {    margin: 0 -10px;
+
+  color: #666;  }
+
+  line-height: 1.7;  
+
+}  .col-md-6 {
+
+    padding: 0 10px;
+
+/* All Signs View */  }
+
+.all-signs-view {}
+
+  padding: 2rem 0;
+
+}/* Custom components for horoscope app */
+
+.placeholder {
+
+.signs-grid {  color: #adb5bd;
+
+  display: grid;  display: flex;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  flex-direction: column;
+
+  gap: 1.5rem;  align-items: center;
+
+  max-width: 1200px;  justify-content: center;
+
+  margin: 0 auto;  height: 300px;
+
+  padding: 0 1rem;  gap: 1.5rem;
+
+}  text-align: center;
+
+}
+
+.sign-card {
+
+  color: white;.placeholder-icon {
+
+  padding: 2rem;  font-size: 4rem;
+
+  border-radius: 15px;  opacity: 0.6;
+
+  text-align: center;  animation: pulse 2s infinite;
+
+  cursor: pointer;}
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);@keyframes pulse {
+
+}  0%, 100% { opacity: 0.6; }
+
+  50% { opacity: 1; }
+
+.sign-card:hover {}
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);/* Zodiac result card with gradient background */
+
+}.zodiac-result-card {
+
+  position: relative;
+
+.sign-symbol {  overflow: hidden;
+
+  font-size: 3rem;  border-radius: 1rem;
+
+  margin-bottom: 1rem;}
+
+  display: block;
+
+}.zodiac-gradient-bg {
+
+  position: absolute;
+
+.sign-name {  top: 0;
+
+  font-size: 1.5rem;  left: 0;
+
+  font-weight: 700;  right: 0;
+
+  margin-bottom: 0.5rem;  bottom: 0;
+
+}  opacity: 0.1;
+
+  z-index: 0;
+
+.sign-dates {}
+
+  font-size: 0.9rem;
+
+  opacity: 0.9;.zodiac-content {
+
+  margin-bottom: 0.5rem;  position: relative;
+
+}  z-index: 1;
+
+}
+
+.sign-element {
+
+  font-size: 0.8rem;.zodiac-symbol {
+
+  opacity: 0.8;  font-size: 4rem;
+
+  text-transform: uppercase;  line-height: 1;
+
+  letter-spacing: 1px;  margin: 1rem 0;
+
+}  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+
+  animation: float 3s ease-in-out infinite;
+
+/* Result View */}
+
+.result-view {
+
+  padding: 0;@keyframes float {
+
+}  0%, 100% { transform: translateY(0px); }
+
+  50% { transform: translateY(-8px); }
+
+.zodiac-detailed-card {}
+
+  max-width: 1200px;
+
+  margin: 2rem auto;.zodiac-header {
+
+  background: white;  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;  padding-bottom: 1.5rem;
+
+  overflow: hidden;  margin-bottom: 2rem;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
+
+}
+
+.zodiac-symbols {
+
+.zodiac-header-bg {  display: flex;
+
+  color: white;  flex-direction: column;
+
+  padding: 3rem 2rem;  align-items: center;
+
+  text-align: center;  gap: 0.5rem;
+
+  position: relative;}
+
+}
+
+.zodiac-image {
+
+.zodiac-symbol-large {  font-size: 4rem;
+
+  font-size: 4rem;  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+
+  margin-bottom: 1rem;  animation: float 3s ease-in-out infinite;
+
+  display: block;}
+
+}
+
+@keyframes rotate {
+
+.zodiac-name {  from { transform: rotate(0deg); }
+
+  font-size: 3rem;  to { transform: rotate(360deg); }
+
+  font-weight: 700;}
+
+  margin-bottom: 0.5rem;
+
+}.element-section {
+
+  padding: 1rem 0;
+
+.zodiac-dates {  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  font-size: 1.2rem;}
+
+  opacity: 0.9;
+
+  margin-bottom: 1.5rem;.traits-section {
+
+}  padding: 1.5rem 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+.zodiac-element-planet {}
+
+  display: flex;
+
+  justify-content: center;.traits-title {
+
+  gap: 1rem;  color: #f8f9fa;
+
+}  font-weight: 600;
+
+  font-size: 1rem;
+
+.element-badge, .planet-badge {  text-transform: uppercase;
+
+  background: rgba(255, 255, 255, 0.2);  letter-spacing: 1px;
+
+  padding: 0.5rem 1rem;  opacity: 0.9;
+
+  border-radius: 25px;}
+
+  font-size: 0.9rem;
+
+  backdrop-filter: blur(10px);.traits-list {
+
+}  display: flex;
+
+  flex-wrap: wrap;
+
+.zodiac-body {  gap: 1rem;
+
+  padding: 3rem 2rem;  justify-content: center;
+
+}  align-items: center;
+
+}
+
+.info-section {
+
+  margin-bottom: 2.5rem;.trait-badge {
+
+}  background: rgba(255, 255, 255, 0.15);
+
+  color: #f8f9fa;
+
+.info-section h3 {  padding: 0.7rem 1.2rem;
+
+  font-size: 1.5rem;  border-radius: 1.5rem;
+
+  font-weight: 700;  font-size: 0.9rem;
+
+  margin-bottom: 1rem;  font-weight: 600;
+
+  color: #333;  backdrop-filter: blur(10px);
+
+}  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  transition: all 0.3s ease;
+
+.traits-grid {  text-transform: capitalize;
+
+  display: flex;  margin: 0.25rem;
+
+  flex-wrap: wrap;}
+
+  gap: 0.5rem;
+
+}.trait-separator {
+
+  color: rgba(255, 255, 255, 0.6);
+
+.trait-chip {  font-size: 1.5rem;
+
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);  margin: 0 0.5rem;
+
+  color: white;  font-weight: bold;
+
+  padding: 0.5rem 1rem;}
+
+  border-radius: 25px;
+
+  font-size: 0.9rem;.trait-badge:hover {
+
+  font-weight: 600;  background: rgba(255, 255, 255, 0.25);
+
+}  transform: translateY(-2px);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+.strengths-list, .weaknesses-list {}
+
+  display: flex;
+
+  flex-direction: column;.horoscope-description {
+
+  gap: 0.75rem;  background: linear-gradient(145deg, #495057 0%, #3a4046 100%);
+
+}  padding: 2rem;
+
+  border-radius: 1rem;
+
+.strength-item, .weakness-item {  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;  margin-top: 2rem;
+
+  align-items: center;  position: relative;
+
+  gap: 0.75rem;  overflow: hidden;
+
+  padding: 0.75rem;  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  background: #f8f9fa;}
+
+  border-radius: 10px;
+
+}.horoscope-description::before {
+
+  content: '';
+
+.strength-icon, .weakness-icon {  position: absolute;
+
+  font-size: 1.2rem;  top: 0;
+
+}  left: 0;
+
+  right: 0;
+
+.compatibility-grid {  height: 3px;
+
+  display: flex;  background: var(--zodiac-gradient, linear-gradient(90deg, #667eea, #764ba2));
+
+  flex-wrap: wrap;}
+
+  gap: 0.5rem;
+
+}.horoscope-description h5 {
+
+  color: #f8f9fa;
+
+.compatibility-chip {  margin-bottom: 1rem;
+
+  background: linear-gradient(135deg, #4ECDC4 0%, #96E6B3 100%);  font-weight: 600;
+
+  color: white;  font-size: 1.2rem;
+
+  padding: 0.5rem 1rem;  display: flex;
+
+  border-radius: 25px;  align-items: center;
+
+  font-size: 0.9rem;  gap: 0.5rem;
+
+  font-weight: 600;}
+
+}
+
+.horoscope-description h5::before {
+
+.description-section {  content: '✨';
+
+  margin-top: 2rem;  font-size: 1rem;
+
+  padding-top: 2rem;}
+
+  border-top: 1px solid #e9ecef;
+
+}.horoscope-description p {
+
+  color: #e9ecef;
+
+.description-card {  line-height: 1.7;
+
+  background: #f8f9fa;  font-size: 1rem;
+
+  padding: 2rem;  margin: 0;
+
+  border-radius: 15px;  text-align: justify;
+
+  font-size: 1.1rem;}
+
+  line-height: 1.8;
+
+  color: #555;/* Animation for smooth transitions */
+
+}.zodiac-result {
+
+  animation: fadeInUp 0.6s ease-out;
+
+/* Container utilities */}
+
+.container, .container-fluid {
+
+  max-width: 1200px;@keyframes fadeInUp {
+
+  margin: 0 auto;  from {
+
+  padding: 0 1rem;    opacity: 0;
+
+}    transform: translateY(30px) scale(0.9);
+
+  }
+
+.row {  to {
+
+  display: flex;    opacity: 1;
+
+  flex-wrap: wrap;    transform: translateY(0) scale(1);
+
+  margin: 0 -0.75rem;  }
+
+}}
+
+
+
+.col-md-4, .col-md-6 {@keyframes slideInFromLeft {
+
+  padding: 0 0.75rem;  from {
+
+  flex: 1;    opacity: 0;
+
+}    transform: translateX(-50px);
+
+  }
+
+.col-md-4 {  to {
+
+  flex: 0 0 33.333%;    opacity: 1;
+
+}    transform: translateX(0);
+
+  }
+
+.col-md-6 {}
+
+  flex: 0 0 50%;
+
+}.form {
+
+  animation: slideInFromLeft 0.6s ease-out;
+
+.justify-content-center {}
+
+  justify-content: center;
+
+}.card:nth-child(2) {
+
+  animation-delay: 0.2s;
+
+.text-center {}
+
+  text-align: center;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.zodiac-detailed-card {
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .zodiac-wheel {
+    width: 250px;
+    height: 250px;
+  }
+
+  .signs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .col-md-4, .col-md-6 {
+    flex: 0 0 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .navbar .container-fluid {
+    padding: 0 1rem;
+  }
+
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .zodiac-body {
+    padding: 2rem 1rem;
+  }
+
+  .zodiac-header-bg {
+    padding: 2rem 1rem;
+  }
+
+  .zodiac-name {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+  }
+  
+  .zodiac-wheel {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .zodiac-sign-item {
+    width: 35px;
+    height: 35px;
+    font-size: 0.6rem;
+  }
+}

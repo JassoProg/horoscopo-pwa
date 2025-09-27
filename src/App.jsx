@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { getZodiacSign, parseDate } from './zodiacData'
+import React, { useState } from 'react'
+import { getZodiacSign, parseDate, zodiacSigns } from './zodiacData'
 import './App.css'
 
 function App() {
@@ -7,17 +7,16 @@ function App() {
   const [birthDate, setBirthDate] = useState('')
   const [zodiacSign, setZodiacSign] = useState(null)
   const [errors, setErrors] = useState({})
+  const [currentView, setCurrentView] = useState('home')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const newErrors = {}
 
-    // Validate name
     if (!name.trim()) {
       newErrors.name = 'Por favor, introduce tu nombre'
     }
 
-    // Validate and parse date
     if (!birthDate.trim()) {
       newErrors.birthDate = 'Por favor, introduce tu fecha de nacimiento'
     } else {
@@ -27,6 +26,7 @@ function App() {
       } else {
         const sign = getZodiacSign(parsedDate)
         setZodiacSign(sign)
+        setCurrentView('result')
       }
     }
 
@@ -34,9 +34,8 @@ function App() {
   }
 
   const handleDateChange = (e) => {
-    let value = e.target.value.replace(/[^\d]/g, '') // Remove non-digits
+    let value = e.target.value.replace(/[^\d]/g, '')
     
-    // Auto-format with slashes
     if (value.length >= 2) {
       value = value.substring(0, 2) + '/' + value.substring(2)
     }
@@ -47,102 +46,197 @@ function App() {
     setBirthDate(value)
   }
 
+  const handleSignClick = (sign) => {
+    setZodiacSign(sign)
+    setCurrentView('result')
+  }
+
+  const resetToHome = () => {
+    setCurrentView('home')
+    setZodiacSign(null)
+    setName('')
+    setBirthDate('')
+    setErrors({})
+  }
+
+  // Vista de resultado detallado
+  if (currentView === 'result' && zodiacSign) {
+    return (
+      <div className="app">
+        <nav className="navbar">
+          <div className="container">
+            <button className="back-btn" onClick={resetToHome}>
+              ← Volver al inicio
+            </button>
+            <h1 className="navbar-brand">Horóscopo</h1>
+            <button className="view-all-btn" onClick={() => setCurrentView('all-signs')}>
+              Ver todos
+            </button>
+          </div>
+        </nav>
+
+        <main className="main-content">
+          <div className="container">
+            <div className="result-card">
+              <div className="result-header" style={{ background: zodiacSign.bgGradient }}>
+                <div className="zodiac-symbol">{zodiacSign.image}</div>
+                <h1 className="zodiac-name">{zodiacSign.name}</h1>
+                <p className="zodiac-dates">{zodiacSign.dateRange}</p>
+                <div className="zodiac-info">
+                  <span className="element-badge">Elemento: {zodiacSign.element}</span>
+                  <span className="planet-badge">Planeta: {zodiacSign.planet}</span>
+                </div>
+              </div>
+
+              <div className="result-body">
+                <div className="info-grid">
+                  <div className="info-card">
+                    <h3>Características</h3>
+                    <div className="traits-container">
+                      {zodiacSign.traits.map((trait, index) => (
+                        <span key={index} className="trait-tag">{trait}</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="info-card">
+                    <h3>Fortalezas</h3>
+                    <ul className="list">
+                      {zodiacSign.strengths.map((strength, index) => (
+                        <li key={index}>{strength}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="info-card">
+                    <h3>Áreas de mejora</h3>
+                    <ul className="list">
+                      {zodiacSign.weaknesses.map((weakness, index) => (
+                        <li key={index}>{weakness}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="info-card">
+                    <h3>Compatibilidad</h3>
+                    <div className="traits-container">
+                      {zodiacSign.compatibility.map((compatible, index) => (
+                        <span key={index} className="compatibility-tag">{compatible}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="description-card">
+                  <h3>Descripción</h3>
+                  <p>{name ? `${name}, ` : ''}{zodiacSign.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    )
+  }
+
+  // Vista de todos los signos
+  if (currentView === 'all-signs') {
+    return (
+      <div className="app">
+        <nav className="navbar">
+          <div className="container">
+            <button className="back-btn" onClick={resetToHome}>
+              ← Volver al inicio
+            </button>
+            <h1 className="navbar-brand">Todos los Signos</h1>
+            <div className="spacer"></div>
+          </div>
+        </nav>
+
+        <main className="main-content">
+          <div className="container">
+            <div className="signs-grid">
+              {zodiacSigns.map((sign, index) => (
+                <div 
+                  key={index}
+                  className="sign-card"
+                  style={{ background: sign.bgGradient }}
+                  onClick={() => handleSignClick(sign)}
+                >
+                  <div className="sign-icon">{sign.image}</div>
+                  <h3 className="sign-name">{sign.name}</h3>
+                  <p className="sign-dates">{sign.dateRange}</p>
+                  <p className="sign-element">{sign.element}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </main>
+      </div>
+    )
+  }
+
+  // Vista principal (home)
   return (
     <div className="app">
       <nav className="navbar">
-        <div className="container-fluid">
-          <h1 className="navbar-brand">Horóscopo React</h1>
-          <p className="navbar-text">Descubre tu signo zodiacal y personalidad</p>
+        <div className="container">
+          <div className="spacer"></div>
+          <h1 className="navbar-brand">Horóscopo</h1>
+          <button className="view-all-btn" onClick={() => setCurrentView('all-signs')}>
+            Ver todos
+          </button>
         </div>
       </nav>
 
       <main className="main-content">
-        <div className="container-fluid">
-          <div className="row">
-            {/* Left Section - Input Form */}
-            <div className="col-md-6">
-              <div className="card">
-                <div className="card-body">
-                  <form onSubmit={handleSubmit} className="form">
-                    <div className="mb-3">
-                      <label htmlFor="name" className="form-label name-label">Nombre:</label>
-                      <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="Introduce tu nombre"
-                        className={errors.name ? 'form-control is-invalid' : 'form-control'}
-                      />
-                      {errors.name && <div className="invalid-feedback">{errors.name}</div>}
-                    </div>
-
-                    <div className="mb-3">
-                      <label htmlFor="birthDate" className="form-label date-label">Fecha de Nacimiento:</label>
-                      <input
-                        type="text"
-                        id="birthDate"
-                        value={birthDate}
-                        onChange={handleDateChange}
-                        placeholder="dd/mm/yyyy"
-                        maxLength="10"
-                        className={errors.birthDate ? 'form-control is-invalid' : 'form-control'}
-                      />
-                      {errors.birthDate && <div className="invalid-feedback">{errors.birthDate}</div>}
-                    </div>
-
-                    <button type="submit" className="btn btn-primary">
-                      Descubrir mi Signo
-                    </button>
-                  </form>
-                </div>
-              </div>
+        <div className="hero-section">
+          <div className="container">
+            <div className="hero-content">
+              <h1 className="hero-title">Descubre tu Signo Zodiacal</h1>
+              <p className="hero-subtitle">
+                Introduce tu fecha de nacimiento y descubre las características únicas de tu signo,
+                tus fortalezas, compatibilidades y mucho más.
+              </p>
             </div>
+          </div>
+        </div>
 
-            {/* Right Section - Zodiac Display */}
-            <div className="col-md-6">
-              <div className="card zodiac-result-card">
-                {zodiacSign && (
-                  <div 
-                    className="zodiac-gradient-bg" 
-                    style={{ background: zodiacSign.bgGradient }}
-                  ></div>
-                )}
-                <div className="card-body zodiac-content">
-                  {zodiacSign ? (
-                    <div className="zodiac-result">
-                      <div className="text-center mb-4">
-                        <h2 className="card-title">Tu Signo: {zodiacSign.name}</h2>
-                        <div className="zodiac-image">{zodiacSign.image}</div>
-                        <div className="zodiac-symbol">{zodiacSign.symbol}</div>
-                      </div>
-                      
-                      <div className="text-center mb-3">
-                        <span className="badge badge-secondary">Elemento: {zodiacSign.element}</span>
-                      </div>
-
-                      <div className="traits-list">
-                        {zodiacSign.traits.map((trait, index) => (
-                          <span key={index} className="trait-badge">{trait}</span>
-                        ))}
-                      </div>
-
-                      <div 
-                        className="horoscope-description"
-                        style={{ '--zodiac-gradient': zodiacSign.bgGradient }}
-                      >
-                        <h5>{name}</h5>
-                        <p>{zodiacSign.description}</p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="text-center placeholder">
-                      <div className="placeholder-icon">🔮</div>
-                      <p>Introduce tu nombre y fecha de nacimiento para descubrir tu signo zodiacal</p>
-                    </div>
-                  )}
+        <div className="form-section">
+          <div className="container">
+            <div className="form-container">
+              <form onSubmit={handleSubmit} className="zodiac-form">
+                <div className="form-group">
+                  <label htmlFor="name">Tu nombre</label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Ej: María"
+                    className={errors.name ? 'invalid' : ''}
+                  />
+                  {errors.name && <span className="error-message">{errors.name}</span>}
                 </div>
-              </div>
+
+                <div className="form-group">
+                  <label htmlFor="birthDate">Fecha de nacimiento</label>
+                  <input
+                    type="text"
+                    id="birthDate"
+                    value={birthDate}
+                    onChange={handleDateChange}
+                    placeholder="dd/mm/yyyy"
+                    maxLength="10"
+                    className={errors.birthDate ? 'invalid' : ''}
+                  />
+                  {errors.birthDate && <span className="error-message">{errors.birthDate}</span>}
+                </div>
+
+                <button type="submit" className="submit-btn">
+                  Descubrir mi signo
+                </button>
+              </form>
             </div>
           </div>
         </div>
